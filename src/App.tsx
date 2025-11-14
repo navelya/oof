@@ -264,7 +264,7 @@ export default function App() {
           </div>
 
           <div 
-            className="rounded-2xl shadow-2xl p-8 md:p-12 max-w-2xl mx-auto"
+            className="rounded-2xl shadow-xl p-8 md:p-12 max-w-2xl mx-auto border border-gray-100"
             style={{ backgroundColor: 'white' }}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -285,7 +285,7 @@ export default function App() {
                       placeholder={field.placeholder}
                       required={field.required}
                       rows={4}
-                      className="w-full rounded-lg border px-3 py-2"
+                      className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 placeholder:text-gray-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   ) : (
                     <input
@@ -295,7 +295,7 @@ export default function App() {
                       onChange={e => setFormData(prev => ({ ...prev, [field.id]: e.target.value }))}
                       placeholder={field.placeholder}
                       required={field.required}
-                      className="w-full rounded-lg border px-3 py-2 h-12"
+                      className="w-full rounded-lg border border-gray-300 px-4 py-3 h-12 text-gray-900 placeholder:text-gray-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   )}
                 </div>
@@ -413,10 +413,10 @@ export default function App() {
                 {section.type === 'features' && (
                   <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
-                      <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                      <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{color: section.styles.textColor || page.primaryColor}}>
                         {section.content.title}
                       </h2>
-                      <p className="text-lg md:text-xl opacity-80">
+                      <p className="text-lg md:text-xl" style={{opacity: 0.8, color: section.styles.textColor}}>
                         {section.content.description}
                       </p>
                     </div>
@@ -428,20 +428,19 @@ export default function App() {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ delay: idx * 0.1 }}
-                          className="bg-white rounded-xl shadow-lg p-6 text-center border-2"
+                          className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-8 text-center border border-gray-200"
                         >
                           <div className="mb-4 flex justify-center">
                             <div 
                               className="rounded-full p-4"
                               style={{ backgroundColor: page.primaryColor + '20' }}
                             >
-                              <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" 
-                                      fill={page.primaryColor} stroke={page.primaryColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                              <svg width="32" height="32" viewBox="0 0 256 256" fill={page.primaryColor}>
+                                <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
                               </svg>
                             </div>
                           </div>
-                          <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                          <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
                           <p className="text-gray-600">{item.description}</p>
                         </motion.div>
                       ))}
@@ -451,7 +450,7 @@ export default function App() {
 
                 {section.type === 'testimonials' && (
                   <div className="max-w-6xl mx-auto">
-                    <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
+                    <h2 className="text-3xl md:text-5xl font-bold text-center mb-12" style={{color: section.styles.textColor}}>
                       {section.content.title}
                     </h2>
                     <div className="grid md:grid-cols-2 gap-8">
@@ -462,29 +461,19 @@ export default function App() {
                           whileInView={{ opacity: 1, scale: 1 }}
                           viewport={{ once: true }}
                           transition={{ delay: idx * 0.1 }}
-                          className="bg-white rounded-xl shadow-lg p-8 border"
+                          className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-8 border border-gray-200"
                         >
-                          <div className="flex mb-4">
+                          <div className="flex gap-1 mb-4">
                             {[...Array(item.rating || 5)].map((_, i) => (
-                              <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" 
-                                      fill="#FFD700" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                              <svg key={i} width="20" height="20" viewBox="0 0 256 256" fill={page.accentColor}>
+                                <path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path>
                               </svg>
                             ))}
                           </div>
-                          <p className="text-gray-700 mb-4 italic">"{item.text}"</p>
-                          <div className="flex items-center">
-                            {item.image && (
-                              <img 
-                                src={item.image} 
-                                alt={item.author} 
-                                className="w-12 h-12 rounded-full object-cover mr-4"
-                              />
-                            )}
-                            <div>
-                              <p className="font-semibold">{item.author}</p>
-                              {item.role && <p className="text-sm text-gray-600">{item.role}</p>}
-                            </div>
+                          <p className="text-lg mb-4 italic text-gray-700">"{item.quote}"</p>
+                          <div>
+                            <p className="font-semibold text-gray-900">{item.name}</p>
+                            <p className="text-sm text-gray-600">{item.role}</p>
                           </div>
                         </motion.div>
                       ))}
@@ -582,7 +571,7 @@ export default function App() {
                 {section.type === 'form' && (
                   <div className="max-w-2xl mx-auto">
                     <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
-                      <h2 className="text-3xl font-bold mb-6 text-center">
+                      <h2 className="text-3xl font-bold mb-6 text-center text-gray-900">
                         {section.content.title || 'Get in Touch'}
                       </h2>
                       <form onSubmit={handleSubmit} className="space-y-6">
@@ -590,7 +579,7 @@ export default function App() {
                           <div key={field.id} className="space-y-2">
                             <label 
                               htmlFor={field.id}
-                              className="block text-sm font-medium"
+                              className="block text-sm font-medium text-gray-900"
                             >
                               {field.label} {field.required && <span className="text-red-500">*</span>}
                             </label>
@@ -602,7 +591,7 @@ export default function App() {
                                 placeholder={field.placeholder}
                                 required={field.required}
                                 rows={4}
-                                className="w-full rounded-lg border px-3 py-2"
+                                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 placeholder:text-gray-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                               />
                             ) : (
                               <input
@@ -612,7 +601,7 @@ export default function App() {
                                 onChange={e => setFormData(prev => ({ ...prev, [field.id]: e.target.value }))}
                                 placeholder={field.placeholder}
                                 required={field.required}
-                                className="w-full rounded-lg border px-3 py-2 h-12"
+                                className="w-full rounded-lg border border-gray-300 px-4 py-3 h-12 text-gray-900 placeholder:text-gray-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                               />
                             )}
                           </div>
