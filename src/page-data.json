@@ -1,0 +1,152 @@
+{
+  "id": "1763156699717-5vtpl7d",
+  "name": "oof",
+  "clientEmail": "Navelya.10@gmail.com",
+  "primaryColor": "#14B8A6",
+  "accentColor": "#06B6D4",
+  "backgroundColor": "#FFFFFF",
+  "textColor": "#1F2937",
+  "headline": "Design. Create. Inspire.",
+  "subheadline": "Bringing your creative vision to life",
+  "description": "Award-winning designer specializing in creating memorable brand experiences that connect and resonate.",
+  "ctaText": "See My Work",
+  "formFields": [
+    {
+      "id": "name",
+      "label": "Full Name",
+      "type": "text",
+      "placeholder": "John Doe",
+      "required": true
+    },
+    {
+      "id": "email",
+      "label": "Email Address",
+      "type": "email",
+      "placeholder": "john@example.com",
+      "required": true
+    },
+    {
+      "id": "phone",
+      "label": "Phone Number",
+      "type": "phone",
+      "placeholder": "+1 (555) 000-0000",
+      "required": false
+    },
+    {
+      "id": "message",
+      "label": "Message",
+      "type": "textarea",
+      "placeholder": "Tell us more about your needs...",
+      "required": false
+    }
+  ],
+  "sections": [
+    {
+      "type": "hero",
+      "content": {
+        "headline": "Design. Create. Inspire.",
+        "subheadline": "Bringing your creative vision to life",
+        "description": "Award-winning designer specializing in creating memorable brand experiences that connect and resonate.",
+        "ctaText": "See My Work"
+      },
+      "styles": {
+        "backgroundType": "gradient",
+        "gradientFrom": "#14B8A6",
+        "gradientTo": "#06B6D4",
+        "gradientDirection": "to-br",
+        "textColor": "#000000",
+        "padding": "xlarge",
+        "scrollEffect": "fade"
+      },
+      "buttonAction": {
+        "type": "scroll",
+        "target": "#form"
+      },
+      "id": "1763156699717-u680o9l",
+      "order": 0
+    },
+    {
+      "type": "features",
+      "content": {
+        "title": "What I Do",
+        "description": "Turning ideas into beautiful realities",
+        "items": [
+          {
+            "icon": "star",
+            "title": "Brand Identity",
+            "description": "Crafting unique visual identities that tell your story"
+          },
+          {
+            "icon": "star",
+            "title": "UI/UX Design",
+            "description": "Designing intuitive interfaces that users love"
+          },
+          {
+            "icon": "star",
+            "title": "Illustration",
+            "description": "Creating custom artwork that brings concepts to life"
+          }
+        ]
+      },
+      "styles": {
+        "backgroundColor": "#FFFFFF",
+        "backgroundType": "solid",
+        "textColor": "#1F2937",
+        "padding": "large",
+        "scrollEffect": "slide"
+      },
+      "id": "1763156699717-9hjsg0x",
+      "order": 1
+    },
+    {
+      "type": "testimonials",
+      "content": {
+        "title": "Kind Words",
+        "items": [
+          {
+            "name": "Alex Thompson",
+            "role": "Creative Director, DesignHub",
+            "quote": "An absolute pleasure to work with. Their creativity and attention to detail are unmatched!",
+            "rating": 5,
+            "avatar": ""
+          },
+          {
+            "name": "Sophie Laurent",
+            "role": "Founder, Boutique Brand",
+            "quote": "They transformed our brand completely. The results exceeded our wildest dreams!",
+            "rating": 5,
+            "avatar": ""
+          }
+        ]
+      },
+      "styles": {
+        "backgroundColor": "#F9FAFB",
+        "backgroundType": "solid",
+        "textColor": "#1F2937",
+        "padding": "large",
+        "scrollEffect": "zoom"
+      },
+      "id": "1763156699717-1xph0g2",
+      "order": 2
+    },
+    {
+      "type": "form",
+      "content": {
+        "title": "Let's Collaborate",
+        "description": "Have a project in mind? Let's make it happen together"
+      },
+      "styles": {
+        "backgroundColor": "#1fd3e0",
+        "backgroundType": "solid",
+        "textColor": "#FFFFFF",
+        "padding": "xlarge",
+        "scrollEffect": "fade"
+      },
+      "id": "1763156699717-xhjypvj",
+      "order": 3
+    }
+  ],
+  "createdAt": 1763156699717,
+  "updatedAt": 1763156699717,
+  "published": false
+}
