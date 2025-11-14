@@ -147,12 +147,12 @@
     }
   ],
   "createdAt": 1763156699717,
-  "updatedAt": 1763157944020,
+  "updatedAt": 1763158165901,
   "published": false,
   "deployment": {
     "repoName": "oof",
     "repoUrl": "https://github.com/navelya/oof",
     "deployedUrl": "https://navelya.github.io/oof/",
-    "lastDeployed": 1763157944020
+    "lastDeployed": 1763158165901
   }
 }
